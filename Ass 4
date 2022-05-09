@@ -1,1 +1,23 @@
+class poly:
+    def __init__(self, a, b, c):
+        self.a = float(a)
+        self.b = float(b)
+        self.c = float(c)
+        self.area = 0
 
+class triangle(poly):
+    def __init__(self, a, b, c):
+        poly.__init__(self, a, b, c)
+
+    def calculate_area(self):
+        s = (self.a + self.b + self.c) / 2
+        self.area = float((s * (s - self.a) * (s - self.b) * (s - self.c))) ** 0.5
+
+    def get_area(self):
+        return self.area     
+
+a, b, c = input("a = "), input("b = "), input("c = ")
+
+t = triangle(a, b, c)
+t.calculate_area()
+print("area : {}".format(t.get_area()))
