@@ -1,3 +1,11 @@
+"""
+1.1 Write a Python Program(with class concepts) to find the area of the triangle using the below
+formula.
+area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+Function to take the length of the sides of triangle from user should be defined in the parent
+class and function to calculate the area should be defined in subclass.
+"""
+
 class poly:
     def __init__(self, a, b, c):
         self.a = float(a)
@@ -21,3 +29,61 @@ a, b, c = input("a = "), input("b = "), input("c = ")
 t = triangle(a, b, c)
 t.calculate_area()
 print("area : {}".format(t.get_area()))
+
+
+def filterlongword(string,number):
+
+    for i in range(len(string)):
+        listwords = []
+        if len(string[i]) > number:
+            listwords.append(string[i])
+
+        return listwords 
+
+"""
+1.2 Write a function filter_long_words() that takes a list of words and an integer n and returns
+the list of words that are longer than n.
+"""
+
+def main():
+    words = input("words: ")
+    integer = eval(input("integer: "))
+
+    words1 = filterlongword(words,integer)
+
+    print("The list of words greater than the integer is",words1)
+
+main() 
+
+"""
+2.1 Write a Python program using function concept that maps list of words into a list of integers
+representing the lengths of the corresponding words.
+"""
+
+listOfWords = input('List of Word: ').split() 
+listOfInts = []
+ 
+for i in range(len(listOfWords)):
+    listOfInts.append(len(listOfWords[i]))
+     
+print ("List of wordlength:"+str(listOfInts))
+
+"""
+2.2 Write a Python function which takes a character (i.e. a string of length 1) and returns True if
+it is a vowel, False otherwise.
+"""
+
+def Charecter(inputChar):
+    if(Charecter == 'a' or Charecter == 'e' or Charecter == 'i' or Charecter == 'o' or Charecter == 'u' or Charecter == 'A'
+       or Charecter == 'E' or Charecter == 'I' or Charecter == 'O' or Charecter == 'U'):
+        print("The Given Character ", Charecter, "is a Vowel")
+        return "True"
+    else:
+        return "False"
+        print("The Given Character ", Charecter, "is a Consonant")
+inputChar = input()
+
+if Charecter(inputChar) == "True":
+    print("The Given Character ", Charecter, "is a Vowel")
+else:
+    print("The Given Character ", Charecter, "is a Consonant") 
